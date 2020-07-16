@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
+
+    public GameManagerMain gameManager;
+
     float speed;
 
-    // Start is called before the first frame update
     void Start() {
-        speed = GameObject.Find("Constants").GetComponent<Constants>().playerSpeed;
+        speed = gameManager.getCharacterSpeed();
     }
 
-    // Update is called once per frame
     void Update() {
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) {
             transform.Translate(Vector3.up * Time.deltaTime * speed);
