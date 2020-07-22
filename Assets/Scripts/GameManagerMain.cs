@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class GameManagerMain : MonoBehaviour
 {
-    float characterSpeed = 3.0f;
+    [SerializeField]
+    private float characterSpeed = 3.0f;
 
-    public float getCharacterSpeed()
+    public float GetCharacterSpeed()
     {
         return characterSpeed;
     }
 
-    public void setCharacterSpeed(float newSpeed)
+    public void SetCharacterSpeed(float newSpeed)
     {
         characterSpeed = newSpeed;
     }
